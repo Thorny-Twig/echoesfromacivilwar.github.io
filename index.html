@@ -266,12 +266,12 @@
 		<section id="contact" class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
 		<div class="container">
 		<h2><i class="bi bi-envelope-fill">&nbsp;</i> Email Author:</h2>
-      		<form><!-- Test Form START -->
+      		<form action="https://formspree.io/f/xwkwnnlk" method="POST"><!-- Test Form START -->
 		<div class="form-group">
 		<small style="padding:1.5em 0;color:red;font-weight:bold;">* Required Information</small></div>
         	<div class="mb-3">
           	<label for="emailContactFormAddress" class="form-label"><span class="text-danger">*&nbsp;</span>Email Address:</label>
-          	<input type="email" class="form-control" id="emailContactFormAddress" placeHolder="enter your email address" aria-describedby="emailHelp">
+          	<input name="emailAddress" type="email" class="form-control" id="emailContactFormAddress" placeHolder="enter your email address" aria-describedby="emailHelp">
         	</div>	
 		<div class="mb-3">
 		<label for="contactNumber" class="form-label"><span class="text-danger">*&nbsp;</span>Contact Phone Number</label>
@@ -279,7 +279,7 @@
 		</div>
         	<div class="mb-3">
 		<label for="emailContactFormMessage" class="form-label"><span class="text-danger">*&nbsp;</span>Message:</label>
-		<textarea class="form-control" id="emailContactFormAddress" rows="4" placeHolder="enter your message/book review"></textarea>
+		<textarea name="emailMessage"class="form-control" id="emailContactFormAddress" rows="4" placeHolder="enter your message/book review"></textarea>
 		</div>
 		<!-- <div id="emailHelp" class="form-text">Required before submitting</div> -->
       		<button type="submit" class="btn btn-primary">Submit</button>
