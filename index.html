@@ -67,7 +67,6 @@
 			a.footerLinks{
 			color:#ffffff;
 			text-decoration:none;
-			font-weight:bold;
 			}
 		
 		</style>
@@ -117,11 +116,11 @@
 		
 		
 		<!-- Video Section START-->
-		<section id="videoClip" class="bg-light text-light mt-6 p-5 text-center text-sm-start" style="background-image:url('https://picsum.photos/id/0/1920/?grayscale');height:vh100">
+		<section id="videoClip" class="bg-light text-light mt-6 p-5 text-center text-sm-start" style="background-image:url('images/book_in_hand.jpg');height:30rem;background-size:cover;">
 		<div class="container">
 			<div class="d-sm-flex p-10 align-items-center justify-content-between">
 				<div>
-					<h1>Echoes From A<span class="text-warning"> Civil War </span></h1>
+					<!-- <h1>Echoes From A<span class="text-warning"> Civil War </span></h1> -->
 				</div>
 			</div>
 			<div id="intro"></div>
@@ -130,11 +129,11 @@
 		<!-- Video Section START-->
 	    
 		<!-- Showcase Section START-->
-		<section class="bg-light text-light mt-6 p-5 text-center text-sm-start" style="background-image:url('https://picsum.photos/id/0/1920/?grayscale');height:vh100">
+		<section class="bg-light text-light mt-6 p-5 text-center text-sm-start" style="background-image:url('images/box_bomb_shot_2.jpg');background-size:cover;">
 		<div class="container">
 			<div class="d-sm-flex p-10 align-items-center justify-content-between">
 				<div>
-					<!-- <h1>Echoes From A<span class="text-warning"> Civil War </span></h1> -->
+					<h1>Echoes From A<span class="text-warning"> Civil War </span></h1>
 					<p class="lead my-4">Echoes from a Civil War tells two stories of violent death in rural Ireland during the nineteen
 					twenties. In December 1925, at Fanore, north Clare, Guard Thomas Dowling was cut down at night
 					by shotgun blasts aimed at him from behind the cemetery wall as he cycled past on routine duties.</p>
@@ -160,6 +159,22 @@
 		</div>
 		</section>
 		<!-- Showcase Section START-->
+
+        <section>
+            <div class="container-fluid p-5 bg-dark text-light">
+            <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div style="margin-bottom: 1.25rem;">
+                    <p>Echoes From A Civil War  by Joe Queally (Paperback) includes Postage & Packaging.</p>
+                    <select id="item-options"><option value="Ireland/UK" price="25">Ireland/UK - 25 EUR</option><option value="USA/Cananda/Austrailia" price="30">USA/Cananda/Austrailia - 30 EUR</option></select>
+                    <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option></select>
+                  </div>
+                <div id="paypal-button-container"></div>
+                </div>
+              </div>
+            </div>
+             
+        </section>
 	    		
 		
 		<!-- Reviews Section START -->
@@ -409,7 +424,7 @@
 		<div class="container">
 		<small>Copyright &copy;
 		<script type="text/javascript"> var dteNow = new Date(); var intYear = dteNow.getFullYear(); document.write(intYear);</script>
-		- Echoes From A Civil War | Hosted on Github <i class="bi bi-github"></i>&nbsp; | <a class="footerLinks" href="tel:+353876260301" target="_self">+353876260301<span>&nbsp;<i class="bi bi-telephone-fill"></i></span></a>
+		- Echoes From A Civil War | Hosted on Github <i class="bi bi-github"></i>&nbsp; | <a class="footerLinks" href="tel:+353876260301" target="_self">+353 876260301<span>&nbsp;<i class="bi bi-telephone-fill"></i></span></a>
 		</small>
 		<a href="#" class="position-absolute bottom-0 end-0 p-5">
 		<i class="bi bi-arrow-up-circle h1"></i>
@@ -424,6 +439,101 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <!-- Paypal Script--> 
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 0;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt(50);
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'Echoes From A Civil War  by Joe Queally (Paperback) includes Postage & Packaging.';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'pill',
+        color: 'blue',
+        layout: 'horizontal',
+        label: 'buynow',
+        tagline: true
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
+
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'EUR',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'EUR',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'EUR',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'EUR',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'EUR',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
+
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
@@ -432,4 +542,3 @@
     -->
   </body>
 </html>
-
